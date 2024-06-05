@@ -20,17 +20,14 @@ jobs:
       with:
         dotnet-version: '7.0.x'
 
-    - name: Navigate to project directory
-      run: cd path/to/your/project
-
     - name: Restore dependencies
-      run: dotnet restore path/to/your/project
+      run: dotnet restore github4women/github4women.csproj
 
     - name: Build project
-      run: dotnet build path/to/your/project --configuration Release --no-restore
+      run: dotnet build github4women/github4women.csproj --configuration Release --no-restore
 
     - name: Run tests
-      run: dotnet test path/to/your/project --no-restore --verbosity normal
+      run: dotnet test github4women/github4women.csproj --no-restore --verbosity normal
 
     - name: Custom script example
       run: |
